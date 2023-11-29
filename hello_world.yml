@@ -3,7 +3,7 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        var: ansible_facts
     - name: Create SSH
       connection: local
       openssh_keypair:
