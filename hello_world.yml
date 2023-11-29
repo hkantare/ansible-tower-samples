@@ -4,6 +4,13 @@
     - name: Hello Message
       debug:
         var: ansible_facts
+    - name: Check if binary exists in PATH
+      command: which ssh-keygen
+      ignore_errors: true
+      register: which_out 
+    - name: Hello which
+      debug:
+        msg: "{{ which_out.stdout }}"
     - name: Create SSH
       openssh_keypair:
         path: '/tmp/id_ssh_rsa'
