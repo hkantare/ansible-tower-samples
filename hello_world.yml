@@ -1,7 +1,5 @@
 - name: Hello World Sample
   hosts: localhost
-  environment:
-    PATH: "/usr/bin:{{ ansible_env.PATH }}"
   tasks:
     - name: Hello Message
       debug:
