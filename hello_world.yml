@@ -5,7 +5,8 @@
       debug:
         var: ansible_facts
     - name: Create SSH
-      connection: local
+      environment:
+        PATH: "/usr/bin:{{ ansible_env.PATH }}"
       openssh_keypair:
         path: '/tmp/id_ssh_rsa'
       register: ssh_key_local
