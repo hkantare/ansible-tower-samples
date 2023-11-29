@@ -1,9 +1,6 @@
 - name: Hello World Sample
   hosts: localhost
   tasks:
-    - name: Hello Message
-      debug:
-        var: ansible_facts
     - name: Check if binary exists in PATH
       command: which ssh-keygen
       ignore_errors: true
