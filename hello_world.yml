@@ -5,7 +5,7 @@
       debug:
         msg: "Hello World!"
     - name: Create SSH
-       openssh_keypair:
-       path: '/tmp/id_ssh_rsa'
-       register: ssh_key_local
+      openssh_keypair:
+        path: '/tmp/id_ssh_rsa'
+        register: ssh_key_local
     
