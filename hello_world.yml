@@ -4,10 +4,7 @@
     - name: Check if binary exists in PATH
       command: which ssh-keygen
       ignore_errors: true
-      register: which_out 
-    - name: Hello
-      debug:
-        msg: "{{ my_var }}"
+      register: which_out
     - name: Create SSH
       openssh_keypair:
         path: '/tmp/id_ssh_rsa'
