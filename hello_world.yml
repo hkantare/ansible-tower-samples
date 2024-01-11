@@ -16,4 +16,8 @@
       pip:
         name: ansible-pylibssh
       state: present
+    - name: Check if binary exists in PATH
+      command: which ansible-pylibssh
+      ignore_errors: true
+      register: which_out1 
     
