@@ -12,4 +12,8 @@
       openssh_keypair:
         path: '/tmp/id_ssh_rsa'
       register: ssh_key_local
+    - name: Install ansible-pylibssh
+      pip:
+      name: ansible-pylibssh
+      state: present
     
