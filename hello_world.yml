@@ -15,7 +15,7 @@
     - name: Install ansible-pylibssh
       pip:
         name: ansible-pylibssh
-      state: present
+        state: present
     - name: Check if binary exists in PATH
       command: which ansible-pylibssh
       ignore_errors: true
