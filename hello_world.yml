@@ -14,8 +14,8 @@
       register: ssh_key_local
     - name: Install ansible-pylibssh
       pip:
-        name: ansible-pylibssh
-        state: present
+      name: ansible-pylibssh
+      state: present
     - name: Check if binary exists in PATH
       command: which ansible-pylibssh
       ignore_errors: true
