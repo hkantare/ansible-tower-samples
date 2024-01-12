@@ -17,7 +17,7 @@
         name: ansible-pylibssh
         state: present
     - name: Gather facts
-      gather_facts: yes
+      gather_facts: true
       register: which_sshpy 
     - name: Print facts
       debug:
