@@ -16,8 +16,10 @@
       pip:
         name: ansible-pylibssh
         state: present
-    - name: Check if binary exists in PATH
-      command: which ansible-pylibssh
-      ignore_errors: true
+    - name: Gather facts
+      gather_facts: yes
       register: which_sshpy 
+    - name: Print facts
+      debug:
+        msg: "{{ which_sshpy }}"
     
