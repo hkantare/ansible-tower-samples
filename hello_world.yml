@@ -16,11 +16,7 @@
       pip:
         name: ansible-pylibssh
         state: present
-    - name: Gather facts
-      hosts: localhost
-        gather_facts: true
-      register: which_sshpy 
     - name: Print facts
       debug:
-        msg: "{{ which_sshpy }}"
+        var: ansible_facts
     
