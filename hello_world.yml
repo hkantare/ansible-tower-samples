@@ -18,7 +18,7 @@
         state: present
     - name: Gather facts
       hosts: localhost
-      gather_facts: true
+        gather_facts: true
       register: which_sshpy 
     - name: Print facts
       debug:
