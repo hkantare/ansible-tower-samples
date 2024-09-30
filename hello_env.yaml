@@ -1,0 +1,9 @@
+- name: deploy pre playbook
+  hosts: localhost
+  tasks:
+    - name: get running ansible env variables
+      set_fact:
+        ibmcloud_api_key: "{{ lookup('env', 'IC_API_KEY') }}"
+    - name: Print the example variable
+      debug:
+        msg: "The value of example_var is: {{ var }}"
