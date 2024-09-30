@@ -6,4 +6,4 @@
         ibmcloud_api_key: "{{ lookup('env', 'IC_API_KEY') }}"
     - name: Print the example variable
       debug:
-        msg: "The value of example_var is: {{ var }}"
+        msg: "The value of example_var is: {{ ibmcloud_api_key }}"
